@@ -9,13 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Hello, world!")
+                .multilineTextAlignment(.center)
+                .padding()
+                .font(.largeTitle)
+            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            }.font(.largeTitle).foregroundColor(.black)
+                .background().colorMultiply(.white)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+            .previewDisplayName("iPhone SE")
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
+            .previewDisplayName("iPhone 12 Pro")
+            .environment(\.colorScheme,.light)
     }
 }
