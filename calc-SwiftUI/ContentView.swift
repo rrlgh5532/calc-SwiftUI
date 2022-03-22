@@ -3,17 +3,25 @@
 //  calc-SwiftUI
 //
 //  Created by 이기호 on 2022/03/21.
-////
+//////
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Hello, world!")
-                .multilineTextAlignment(.center)
-                .padding()
-                .font(.largeTitle)
+            VStack{
+                Text("Hello, world!")
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .font(.largeTitle)
+                Text("Goodboy Wolrd")
+                HStack{
+                    Text("Text3")
+                    Text("Text4")
+                }
+            }
+            Text("Text5")
             Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
             }.font(.largeTitle).foregroundColor(.black)
