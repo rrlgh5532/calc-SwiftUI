@@ -15,17 +15,27 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .font(.largeTitle)
-                Text("Goodboy Wolrd")
+                Text("Goodboy Wolrd").font(.custom("Copperplate", size: 70))
                 HStack{
-                    Text("Text3")
+                    Text("Text3").padding().border(Color.black)
                     Text("Text4")
                 }
+                MyHstackView()
             }
             Text("Text5")
             Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
             }.font(.largeTitle).foregroundColor(.black)
                 .background().colorMultiply(.white)
+        }
+    }
+}
+
+struct MyHstackView: View{
+    var body: some View{
+        HStack{
+            Text("Text 6")
+            Text("Text 7")
         }
     }
 }
