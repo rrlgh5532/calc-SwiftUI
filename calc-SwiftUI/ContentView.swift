@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
+        VStack(alignment: .center, spacing: 0.0){
             HStack{
                 Text("test1")
             }.fixedSize(horizontal: true, vertical: true)
@@ -20,7 +20,9 @@ struct ContentView: View {
                 Text("Test3")
                 
             }.fixedSize(horizontal: true, vertical: false)
-        }.fixedSize(horizontal: true, vertical: true)
+        }
+        
+        
     }
 }
 
